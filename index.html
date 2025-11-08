@@ -624,6 +624,62 @@
       animation: fadeInUp 0.8s ease-out;
     }
     
+    /* Scroll Animation Classes */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .scroll-animate-slide-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .scroll-animate-slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scroll-animate-slide-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .scroll-animate-slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    /* Illustration Dividers */
+    .illustration-divider {
+      padding: 4rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    
+    .illustration-divider.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .illustration-divider svg {
+      max-width: 100%;
+      height: auto;
+    }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
       nav .nav-links {
@@ -746,7 +802,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section-dark">
+  <section id="about" class="section-dark scroll-animate">
     <h2>About Sarvodaya</h2>
     <div class="two-column">
       <div>
@@ -782,8 +838,52 @@
     </div>
   </section>
 
+  <!-- Illustration Divider: Backwater Boat Scene -->
+  <div class="illustration-divider">
+    <svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- Water -->
+      <rect x="0" y="120" width="600" height="180" fill="#e8ede8" opacity="0.3"/>
+      
+      <!-- Distant Palm Trees (Left) -->
+      <path d="M80,120 Q78,90 76,60" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M76,60 Q60,65 50,75" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M76,60 Q65,68 58,78" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M76,60 Q92,65 100,75" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      
+      <!-- Distant Palm Trees (Right) -->
+      <path d="M520,120 Q522,90 524,60" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M524,60 Q508,65 498,75" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M524,60 Q513,68 506,78" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M524,60 Q540,65 550,75" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.4"/>
+      
+      <!-- Traditional Boat -->
+      <path d="M200,180 Q250,175 300,175 Q350,175 400,180 L390,195 Q345,190 300,190 Q255,190 210,195 Z" 
+            stroke="#2c2c2c" stroke-width="2.5" fill="none"/>
+      <path d="M300,155 L300,175" stroke="#2c2c2c" stroke-width="2" fill="none"/>
+      <path d="M295,155 L305,155" stroke="#2c2c2c" stroke-width="2" fill="none"/>
+      
+      <!-- Water Reflections -->
+      <path d="M200,200 Q250,198 300,200 Q350,202 400,200" stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <ellipse cx="300" cy="210" rx="100" ry="8" fill="none" stroke="#8b9d87" stroke-width="1" opacity="0.2"/>
+      
+      <!-- Water Ripples -->
+      <path d="M50,140 Q150,138 250,140 Q350,142 450,140 Q500,138 550,140" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M30,160 Q130,158 230,160 Q330,162 430,160 Q530,158 580,160" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M60,220 Q160,218 260,220 Q360,222 460,220 Q510,218 560,220" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M20,240 Q120,238 220,240 Q320,242 420,240 Q520,238 590,240" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.2"/>
+      
+      <!-- Palm Reflections in Water -->
+      <path d="M80,130 L76,160" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.15"/>
+      <path d="M520,130 L524,160" stroke="#8b9d87" stroke-width="1.5" fill="none" opacity="0.15"/>
+    </svg>
+  </div>
+
   <!-- Amenities Section -->
-  <section id="amenities">
+  <section id="amenities" class="scroll-animate">
     <h2>Your Space</h2>
     <div class="cards-grid">
       <div class="card">
@@ -879,7 +979,7 @@
   </section>
 
   <!-- Activities Section -->
-  <section id="activities" class="section-dark">
+  <section id="activities" class="section-dark scroll-animate">
     <h2>Experiences & Activities</h2>
     <div class="cards-grid">
       <div class="card">
@@ -974,8 +1074,63 @@
     </div>
   </section>
 
+  <!-- Illustration Divider: Kerala Houseboat Scene -->
+  <div class="illustration-divider">
+    <svg width="700" height="350" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sky -->
+      <rect x="0" y="0" width="700" height="180" fill="#f9f7f5" opacity="0.5"/>
+      
+      <!-- Coconut Trees Background -->
+      <path d="M100,180 Q98,140 96,100" stroke="#8b9d87" stroke-width="2.5" fill="none" opacity="0.3"/>
+      <path d="M96,100 Q75,108 60,122" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      <path d="M96,100 Q82,110 72,125" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      <path d="M96,100 Q112,108 125,122" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      
+      <path d="M600,180 Q602,140 604,100" stroke="#8b9d87" stroke-width="2.5" fill="none" opacity="0.3"/>
+      <path d="M604,100 Q583,108 568,122" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      <path d="M604,100 Q590,110 580,125" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      <path d="M604,100 Q620,108 635,122" stroke="#8b9d87" stroke-width="1.8" fill="none" opacity="0.3"/>
+      
+      <!-- Water -->
+      <rect x="0" y="180" width="700" height="170" fill="#e8ede8" opacity="0.3"/>
+      
+      <!-- Houseboat Main Structure -->
+      <path d="M250,200 L450,200 L460,240 L240,240 Z" stroke="#2c2c2c" stroke-width="2.5" fill="none"/>
+      <rect x="260" y="170" width="180" height="30" rx="2" stroke="#8b7355" stroke-width="2" fill="none"/>
+      
+      <!-- Houseboat Roof -->
+      <path d="M240,170 Q350,155 460,170" stroke="#2c2c2c" stroke-width="2.5" fill="none"/>
+      <line x1="250" y1="168" x2="250" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="280" y1="165" x2="280" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="310" y1="162" x2="310" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="340" y1="160" x2="340" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="370" y1="162" x2="370" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="400" y1="165" x2="400" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      <line x1="430" y1="168" x2="430" y2="200" stroke="#8b7355" stroke-width="1.5" opacity="0.5"/>
+      
+      <!-- Windows -->
+      <rect x="280" y="180" width="30" height="15" rx="1" stroke="#2c2c2c" stroke-width="1.5" fill="none"/>
+      <rect x="335" y="180" width="30" height="15" rx="1" stroke="#2c2c2c" stroke-width="1.5" fill="none"/>
+      <rect x="390" y="180" width="30" height="15" rx="1" stroke="#2c2c2c" stroke-width="1.5" fill="none"/>
+      
+      <!-- Boat Hull -->
+      <path d="M230,240 Q250,255 350,255 Q450,255 470,240" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      
+      <!-- Water Ripples -->
+      <path d="M100,260 Q200,258 300,260 Q400,262 500,260 Q550,258 600,260" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M80,280 Q180,278 280,280 Q380,282 480,280 Q580,278 650,280" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M50,300 Q150,298 250,300 Q350,302 450,300 Q550,298 650,300" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.2"/>
+      
+      <!-- Reflection -->
+      <ellipse cx="350" cy="270" rx="110" ry="12" fill="none" stroke="#8b9d87" stroke-width="1" opacity="0.2"/>
+    </svg>
+  </div>
+
   <!-- Pricing Section -->
-  <section id="pricing">
+  <section id="pricing" class="scroll-animate">
     <h2>Pricing</h2>
     <div class="pricing-box">
       <p class="subheading">PER NIGHT</p>
@@ -993,8 +1148,63 @@
     </div>
   </section>
 
+  <!-- Illustration Divider: Meditation in Nature -->
+  <div class="illustration-divider">
+    <svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background Foliage (Left) -->
+      <path d="M50,200 Q60,180 70,160 Q75,150 80,140" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M40,220 Q52,200 64,180 Q72,165 80,150" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M60,240 Q70,220 80,200 Q88,185 95,170" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      
+      <!-- Background Foliage (Right) -->
+      <path d="M450,200 Q440,180 430,160 Q425,150 420,140" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M460,220 Q448,200 436,180 Q428,165 420,150" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M440,240 Q430,220 420,200 Q412,185 405,170" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.3"/>
+      
+      <!-- Palm Trees (Foreground) -->
+      <path d="M120,350 Q118,300 116,250" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      <path d="M116,250 Q95,258 80,272" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M116,250 Q102,260 92,275" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M116,250 Q135,258 148,272" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M116,250 Q128,260 136,275" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      
+      <path d="M380,350 Q382,300 384,250" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      <path d="M384,250 Q363,258 348,272" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M384,250 Q370,260 360,275" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M384,250 Q403,258 418,272" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      <path d="M384,250 Q396,260 406,275" stroke="#8b9d87" stroke-width="2.5" fill="none"/>
+      
+      <!-- Meditation Figure -->
+      <circle cx="250" cy="160" r="25" fill="none" stroke="#2c2c2c" stroke-width="2.5"/>
+      <path d="M250,185 L250,270" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      
+      <!-- Arms in Meditation Pose -->
+      <path d="M250,205 Q225,220 210,245 Q205,260 215,275" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      <path d="M250,205 Q275,220 290,245 Q295,260 285,275" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      
+      <!-- Legs in Lotus Position -->
+      <path d="M215,275 Q235,295 250,290 Q265,295 285,275" stroke="#2c2c2c" stroke-width="3" fill="none"/>
+      <path d="M210,280 Q230,295 250,292" stroke="#2c2c2c" stroke-width="2.5" fill="none"/>
+      <path d="M250,292 Q270,295 290,280" stroke="#2c2c2c" stroke-width="2.5" fill="none"/>
+      
+      <!-- Surrounding Plants -->
+      <path d="M180,310 Q185,295 190,280" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M170,320 Q177,305 184,290" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M320,310 Q315,295 310,280" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M330,320 Q323,305 316,290" stroke="#8b9d87" stroke-width="2" fill="none" opacity="0.5"/>
+      
+      <!-- Ground/Mat -->
+      <ellipse cx="250" cy="300" rx="90" ry="15" fill="none" stroke="#8b9d87" stroke-width="1.5" opacity="0.3"/>
+      
+      <!-- Peaceful Energy Circles -->
+      <circle cx="250" cy="160" r="50" fill="none" stroke="#8b9d87" stroke-width="0.5" opacity="0.2"/>
+      <circle cx="250" cy="160" r="70" fill="none" stroke="#8b9d87" stroke-width="0.5" opacity="0.15"/>
+      <circle cx="250" cy="160" r="90" fill="none" stroke="#8b9d87" stroke-width="0.5" opacity="0.1"/>
+    </svg>
+  </div>
+
   <!-- Location Section -->
-  <section id="location" class="section-dark">
+  <section id="location" class="section-dark scroll-animate">
     <h2>Location & Experience</h2>
     <div class="two-column">
       <div class="illustration-container">
@@ -1046,8 +1256,71 @@
     </div>
   </section>
 
+  <!-- Illustration Divider: Sunset Over Backwaters -->
+  <div class="illustration-divider">
+    <svg width="650" height="350" viewBox="0 0 650 350" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sky Gradient Suggestion (using layered opacity) -->
+      <rect x="0" y="0" width="650" height="200" fill="#f9f7f5" opacity="0.6"/>
+      <ellipse cx="325" cy="130" rx="150" ry="80" fill="#8b9d87" opacity="0.08"/>
+      
+      <!-- Sun -->
+      <circle cx="325" cy="130" r="40" fill="none" stroke="#8b7355" stroke-width="2" opacity="0.6"/>
+      <circle cx="325" cy="130" r="45" fill="none" stroke="#8b7355" stroke-width="1" opacity="0.4"/>
+      <circle cx="325" cy="130" r="52" fill="none" stroke="#8b7355" stroke-width="0.8" opacity="0.25"/>
+      
+      <!-- Sun Reflection on Water -->
+      <ellipse cx="325" cy="210" rx="35" ry="70" fill="none" stroke="#8b7355" stroke-width="1.5" opacity="0.3"/>
+      <path d="M325,180 L325,240" stroke="#8b7355" stroke-width="2" opacity="0.25"/>
+      
+      <!-- Silhouetted Palm Trees (Left) -->
+      <path d="M100,240 Q98,200 96,160" stroke="#2c2c2c" stroke-width="3" fill="none" opacity="0.7"/>
+      <path d="M96,160 Q75,168 60,182" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M96,160 Q82,170 72,185" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M96,160 Q112,168 125,182" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M96,160 Q108,172 115,188" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      
+      <path d="M150,250 Q149,210 148,170" stroke="#2c2c2c" stroke-width="2.8" fill="none" opacity="0.6"/>
+      <path d="M148,170 Q130,176 118,188" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      <path d="M148,170 Q136,179 128,192" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      <path d="M148,170 Q162,176 172,188" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      
+      <!-- Silhouetted Palm Trees (Right) -->
+      <path d="M550,240 Q552,200 554,160" stroke="#2c2c2c" stroke-width="3" fill="none" opacity="0.7"/>
+      <path d="M554,160 Q533,168 518,182" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M554,160 Q540,170 530,185" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M554,160 Q570,168 585,182" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M554,160 Q566,172 575,188" stroke="#2c2c2c" stroke-width="2.5" fill="none" opacity="0.6"/>
+      
+      <path d="M500,250 Q501,210 502,170" stroke="#2c2c2c" stroke-width="2.8" fill="none" opacity="0.6"/>
+      <path d="M502,170 Q484,176 472,188" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      <path d="M502,170 Q490,179 482,192" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      <path d="M502,170 Q516,176 526,188" stroke="#2c2c2c" stroke-width="2.3" fill="none" opacity="0.5"/>
+      
+      <!-- Water Surface -->
+      <rect x="0" y="190" width="650" height="160" fill="#e8ede8" opacity="0.25"/>
+      
+      <!-- Water Ripples -->
+      <path d="M0,200 Q100,198 200,200 Q300,202 400,200 Q500,198 650,200" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.4"/>
+      <path d="M0,220 Q100,218 200,220 Q300,222 400,220 Q500,218 650,220" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.35"/>
+      <path d="M0,250 Q100,248 200,250 Q300,252 400,250 Q500,248 650,250" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,280 Q100,278 200,280 Q300,282 400,280 Q500,278 650,280" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.25"/>
+      <path d="M0,310 Q100,308 200,310 Q300,312 400,310 Q500,308 650,310" 
+            stroke="#8b9d87" stroke-width="1" fill="none" opacity="0.2"/>
+      
+      <!-- Distant Birds -->
+      <path d="M250,90 Q255,85 260,90" stroke="#2c2c2c" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M260,90 Q265,85 270,90" stroke="#2c2c2c" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M400,110 Q405,105 410,110" stroke="#2c2c2c" stroke-width="1" fill="none" opacity="0.25"/>
+      <path d="M410,110 Q415,105 420,110" stroke="#2c2c2c" stroke-width="1" fill="none" opacity="0.25"/>
+    </svg>
+  </div>
+
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="scroll-animate">
     <h2>Get in Touch</h2>
     <p class="contact-intro">Interested in a retreat? We'd love to hear about what brings you here. Reach out to discuss dates, duration, and how Sarvodaya can serve your journey.</p>
     
@@ -1204,27 +1477,52 @@
       }
     });
     
-    // Intersection Observer for fade-in animations
+    // Enhanced Intersection Observer for scroll animations
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -80px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('visible');
         }
       });
     }, observerOptions);
     
-    // Observe all cards
-    document.querySelectorAll('.card').forEach(card => {
+    // Observe all sections with scroll-animate class
+    document.querySelectorAll('.scroll-animate').forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Observe all illustration dividers
+    document.querySelectorAll('.illustration-divider').forEach(divider => {
+      observer.observe(divider);
+    });
+    
+    // Observe cards with staggered animation
+    document.querySelectorAll('.card').forEach((card, index) => {
       card.style.opacity = '0';
       card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
+      card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+      
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      cardObserver.observe(card);
+    });
+    
+    // Add slide animations to two-column sections
+    document.querySelectorAll('.two-column > div').forEach((col, index) => {
+      col.classList.add(index % 2 === 0 ? 'scroll-animate-slide-left' : 'scroll-animate-slide-right');
+      observer.observe(col);
     });
   </script>
 </body>
